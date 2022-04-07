@@ -10,4 +10,4 @@ How to use:
 ````
 
 
-he project was rebuilt the original code is with  https://github.com/OriginalRooks
+The project was rebuilt the original code is with  https://github.com/OriginalRooks
