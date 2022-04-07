@@ -16,6 +16,3 @@ Port example:
 20000 ,20001, 20002
 
 A total of 10 BungeeCord can be processed !!
-
-
-The project was rebuilt the original code is with  https://github.com/OriginalRooks
