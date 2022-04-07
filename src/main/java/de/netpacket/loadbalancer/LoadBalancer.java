@@ -36,8 +36,4 @@ public class LoadBalancer {
     public BalancingStrategy getBalancingStrategy() {
         return balancingStrategy;
     }
-
-    public static void main(String[] args) {
-        new LoadBalancer(new InetSocketAddress(25565), 2);
-    }
 }
