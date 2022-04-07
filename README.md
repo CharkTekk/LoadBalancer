@@ -16,3 +16,5 @@ Port example:
 20000 ,20001, 20002
 
 A total of 10 BungeeCord can be processed !!
+
+The LoadBalancer was rebuilt the original src is with: https://github.com/OriginalRooks
