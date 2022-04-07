@@ -5,11 +5,11 @@ How to use:
 
 ```java
     
-    //Logic for you Project
+    Logic for you Project
     new LoadBalancer(new InetSocketAddress(25565), amount);
 
-    Others:
-    screen -S Loadbalancer java -jar LoadBalancer.jar localhost port amount
+    or use the jar:
+    java -jar LoadBalancer.jar localhost port amount
 
 ````
 
