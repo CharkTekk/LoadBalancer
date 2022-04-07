@@ -15,12 +15,12 @@ public class LoadBalancer {
     private final BalancingStrategy balancingStrategy;
     private final NetworkManager networkManager;
 
-    public LoadBalancer(final InetSocketAddress address, int porxys) {
+    public LoadBalancer(final InetSocketAddress address, int proxy) {
         System.setProperty("java.net.preferIPv4Stack", "true");
         ResourceLeakDetector.setLevel(ResourceLeakDetector.Level.DISABLED);
 
         this.inetManager = new InetManager();
-        this.balancingStrategy = new RoundRobinBalancingStrategy(inetManager.atr(porxys).toArray(new InetSocketAddress[0]));
+        this.balancingStrategy = new RoundRobinBalancingStrategy(inetManager.atr(address.getAddress().getHostName(), proxy).toArray(new InetSocketAddress[0]));
         this.networkManager = new NetworkManager(this, address);
         this.networkManager.connect();
 
@@ -35,5 +35,10 @@ public class LoadBalancer {
 
     public BalancingStrategy getBalancingStrategy() {
         return balancingStrategy;
+    }
+
+
+    public static void main(String[] args) {
+        new LoadBalancer(new InetSocketAddress(args[0],25565), Integer.parseInt(args[1]));
     }
 }

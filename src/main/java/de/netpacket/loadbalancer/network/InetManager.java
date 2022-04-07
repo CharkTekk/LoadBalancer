@@ -20,10 +20,10 @@ public class InetManager {
             new InetSocketAddress("127.0.0.1", 20009)
     );
 
-    public List<InetSocketAddress> atr(int proxys){
+    public List<InetSocketAddress> atr(String address, int proxy){
         List<InetSocketAddress> current = new ArrayList<>();
-        for (int i = 0; i < proxys; i++) {
-            current.add(addressList.get(i));
+        for (int i = 0; i < proxy; i++) {
+            current.add(new InetSocketAddress(address, 20000+i));
         }
         return current;
     }
